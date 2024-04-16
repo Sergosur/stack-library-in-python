@@ -1,0 +1,16 @@
+# чистый декоратор
+#первая функция
+def decorator_function(func):
+    def python():
+        print("Первая функция")
+        print("обрабатываемая функция {}".format(func))
+        print("выполняем функцию")
+        func()
+        print("Выходим из функции")
+    return python
+
+@decorator_function
+def first_decorator():
+    print("first_decorator")
+
+first_decorator()
